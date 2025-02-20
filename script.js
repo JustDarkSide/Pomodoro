@@ -85,6 +85,7 @@ const reset = () => {
 	});
 };
 
+document.addEventListener('resize', setProperImage);
 document.addEventListener('DOMContentLoaded', setProperImage);
 startBtn.addEventListener('click', () => {
 	startStudyTime();
