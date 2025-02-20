@@ -37,8 +37,7 @@ const startStudyTime = () => {
 const countdown = () => {
 	if (cycleCount == 4) {
 		clearTimeout(timer);
-		timerTitle.textContent =
-			'Czas na odpoczynek (domyślnie 20-30 min)';
+		timerTitle.textContent = 'Czas na odpoczynek (domyślnie 20-30 min)';
 		return;
 	}
 
@@ -78,6 +77,7 @@ const reset = () => {
 	let breakTimeInput = document.querySelector('.break__time');
 	workTimeInput.value = 25;
 	breakTimeInput.value = 5;
+	timerTitle.textContent = 'Kliknij Start, aby rozpocząć!';
 	startBtn.style.opacity = 1;
 	startBtn.removeAttribute('disabled');
 	allPomodoroDives.forEach((div) => {
