@@ -35,10 +35,10 @@ const startStudyTime = () => {
 };
 
 const countdown = () => {
-	if (cycleCount >= 4 && !isWorkSession) {
+	if (cycleCount == 4) {
 		clearTimeout(timer);
 		timerTitle.textContent =
-			'Czas na odpoczynek (przy domyślnym czasie 20-30 min)';
+			'Czas na odpoczynek (domyślnie 20-30 min)';
 		return;
 	}
 
@@ -58,10 +58,10 @@ const countdown = () => {
 
 		if (!isWorkSession) {
 			allPomodoroDives[cycleCount].style.filter = 'None';
+			cycleCount++;
 			remainingTime = breakTime;
 			timerTitle.textContent = 'Czas na odpoczynek!';
 		} else {
-			cycleCount++;
 			remainingTime = workTime;
 			timerTitle.textContent = 'Czas na naukę !';
 		}
