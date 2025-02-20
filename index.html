@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Pomodoro</title>
+		<link rel="stylesheet" href="./css/style.css" />
+		<meta name="author" content="Kacper Zając" />
+	</head>
+	<body>
+		<div class="background__shadow"></div>
+		<div class="time__selection__container">
+			<label for="user_learning_time_selection">Czas nauki (min)</label
+			><input
+				type="number"
+				id="user_learning_time_selection"
+				value="25"
+				class="study__time" />
+			<label for="user_time_selection">Czas przerwy (min)</label
+			><input
+				type="number"
+				id="user_break_time_selection"
+				value="5"
+				class="break__time" />
+			<div class="buttons__box">
+				<button class="start__btn">Start</button>
+				<button class="reset__btn">Reset</button>
+			</div>
+		</div>
+		<div class="timer__external__container">
+			<div class="timer__internal__container">
+				<p class="timer__title">Kliknij Start, aby rozpocząć</p>
+				<p class="time">
+					<span class="time__minutes">00</span>:<span class="time__seconds"
+						>00</span
+					>
+				</p>
+			</div>
+			<div class="pomodoros">
+				<!-- Ikonka pomidora pochodzi stąd: https://www.svgrepo.com/svg/7878/tomato -->
+				<div class="pomodoros__first__row">
+					<div class="pomodoro pomodoro_1">
+						<img src="./images/tomato-small-icon.svg" alt="" />
+					</div>
+					<div class="pomodoro pomodoro_2">
+						<img src="./images/tomato-small-icon.svg" alt="" />
+					</div>
+				</div>
+				<div class="pomodoros__second__row">
+					<div class="pomodoro pomodoro_3">
+						<img src="./images/tomato-small-icon.svg" alt="" />
+					</div>
+					<div class="pomodoro pomodoro_4">
+						<img src="./images/tomato-small-icon.svg" alt="" />
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer><p>Pracę wykonał Kacper Zając nr albumu 175785</p></footer>
+	</body>
+	<script src="script.js"></script>
+</html>

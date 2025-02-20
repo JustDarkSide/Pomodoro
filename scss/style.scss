@@ -1,0 +1,198 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+	font-size: 62.5%;
+}
+@font-face {
+	font-family: 'Montserrat';
+	src: url('../Montserrat-Regular.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+body {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	background-color: #333;
+	color: #fff;
+	font-family: 'Montserrat', sans-serif;
+	background-image: url('../images/pomidor_tlo.jpg');
+	// Obraz dostępny tutaj: https://pixabay.com/pl/photos/pomidor-pietruszka-pieprz-663097/
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	z-index: 1;
+}
+.background__shadow {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 2;
+}
+.time__selection__container {
+	padding-top: 3rem;
+	position: relative;
+	z-index: 3;
+	input,
+	label {
+		display: block;
+	}
+	input {
+		width: 20%;
+		margin: 0 auto;
+		padding: 1rem 0;
+		font-size: 1.5rem;
+		text-align: center;
+		margin-bottom: 2rem;
+	}
+	label {
+		width: 60%;
+		margin: 0 auto;
+		font-size: 2.3rem;
+		text-align: center;
+		margin-bottom: 1rem;
+	}
+	.buttons__box {
+		display: flex;
+		justify-content: space-evenly;
+		width: 80%;
+		margin: 0 auto;
+		margin-top: 3rem;
+		button {
+			padding: 1.5rem 2rem;
+			font-weight: bold;
+			border-radius: 10px;
+			border: none;
+			touch-action: manipulation;
+			cursor: pointer;
+			font-family: 'Montserrat', sans-serif;
+			transition: background-color 0.3s, color 0.3s;
+		}
+		.start__btn {
+			background-color: green;
+			color: yellow;
+		}
+		.reset__btn {
+			background-color: darkgray;
+			color: #fff;
+		}
+		.start__btn:hover {
+			background-color: lightgreen;
+			color: blue;
+		}
+		.reset__btn:hover {
+			background-color: lightgray;
+			color: #333;
+		}
+	}
+}
+.timer__external__container {
+	width: 80%;
+	margin: 0 auto;
+	margin-top: 4rem;
+	position: relative;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	z-index: 3;
+	.timer__title {
+		font-size: 2.5rem;
+		font-weight: bold;
+		text-align: center;
+		margin-bottom: 1.5rem;
+	}
+	.time {
+		font-size: 3.6rem;
+		text-align: center;
+		margin-bottom: 4rem;
+	}
+	.pomodoros {
+		&__first__row{
+			width: 80%;
+			margin: 0 auto;
+			margin-bottom: 2.5rem;
+			display: flex;
+			justify-content: space-evenly;
+			align-items: center;
+		}
+		&__second__row{
+			width: 80%;
+			margin: 0 auto;
+			margin-bottom: 1rem;
+			display: flex;
+			justify-content: space-evenly;
+			align-items: center;
+		}
+		.pomodoro{
+			filter: sepia();
+		}
+	}
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 3;
+	width: 100%;
+	background-color: #333;
+	padding: 1rem 0;
+	font-size: 1.5rem;
+	text-align: center;
+}
+
+
+@media(min-width: 768px){
+	.time__selection__container {
+		input {
+			padding: 1rem 0;
+			font-size: 2.2rem;
+			margin-bottom: 3rem;
+		}
+		label {
+			font-size: 4rem;
+			margin-bottom: 1rem;
+		}
+		.buttons__box {
+			padding-top: 5rem;
+			margin-top: 3rem;
+			button {
+				width: 35%;
+				font-size: 2.5rem;
+			}
+		}
+	}
+	.timer__external__container {
+		margin-top: 6rem;
+		.timer__title {
+			font-size: 4rem;
+			margin-bottom: 2.5rem;
+		}
+		.time {
+			font-size: 5rem;
+			margin-bottom: 4rem;
+		}
+		.pomodoros {
+			display: flex;
+			flex-direction: row;
+			padding: 4rem 0;
+			&__first__row{
+				display: flex;
+				width: 50%;
+			}
+			&__second__row{
+				display: flex;
+				width: 50%;
+			}
+		}
+	}
+	footer{
+		font-size: 2rem;
+	}
+}
